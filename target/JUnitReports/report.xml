@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.276" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="feature to validate count of International Players in Team RCB" name="Check the count of International Players in Team RCB" time="0.104">
+<testsuite name="Cucumber" time="0.253" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="feature to validate count of International Players in Team RCB" name="Check the count of International Players in Team RCB" time="0.094">
 <system-out><![CDATA[
 Given Team RCB Player List..................................................passed
 When The name and location of RCB as follows................................passed
@@ -8,7 +8,7 @@ And get the count of international players for RCB..........................pass
 Then validate for the count of international players is four................passed
 ]]></system-out>
 </testcase>
-<testcase classname="feature to validate count of International Players in Team RCB" name="Check the count of Wicket Keepers in Team RCB" time="0.015">
+<testcase classname="feature to validate count of International Players in Team RCB" name="Check the count of Wicket Keepers in Team RCB" time="0.009">
 <system-out><![CDATA[
 Given Team RCB Player List..................................................passed
 When The role of RCB as follows.............................................passed

@@ -14,6 +14,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.junit.Assert;
 
 public class StepBuilder {
 
@@ -22,7 +23,7 @@ public class StepBuilder {
 	static int countInternationalPlayrs = 0;
 
 	static int countWicketKeepers = 0;
-	
+
 	private static Logger logger = Logger.getLogger("MyLog");
 
 	public static void init() {
@@ -93,8 +94,7 @@ public class StepBuilder {
 		if (countInternationalPlayrs == 4) {
 			System.out.println("There are 4 International Players has been selected for the match.");
 			logger.info("There are 4 International Players has been selected for the match.");
-			// Assert.assertEquals("Count Matched for International Players", 4,
-			// countInternationalPlayrs);
+			Assert.assertEquals("Count Matched for International Players", 4, countInternationalPlayrs);
 		} else {
 			System.out.println("Invalid Team Format for the match");
 			logger.info("Invalid Team Format for the match");
@@ -123,7 +123,7 @@ public class StepBuilder {
 				if (pair.getKey().toString().equalsIgnoreCase("role")) {
 					System.out.println("#####################################");
 					System.out.println(pair.getKey() + " : " + pair.getValue());
-					if (!(pair.getValue().toString().equalsIgnoreCase("Wicket-keeper"))) {
+					if ((pair.getValue().toString().equals("Wicket-keeper"))) {
 						countWicketKeepers++;
 					}
 				}
@@ -137,8 +137,7 @@ public class StepBuilder {
 	void displayWicketKeeperDetails(int countInternationalPlayrs) {
 		if (countWicketKeepers >= 1) {
 			System.out.println("A single wicket keeper has been selected for this match.");
-			// Assert.assertEquals("Count Matched for International Players", 4,
-			// countInternationalPlayrs);
+			Assert.assertEquals("Count Matched for International Players", 1, countWicketKeepers);
 		} else {
 			System.out.println("No such wicket keeper has been selected for this match");
 		}
